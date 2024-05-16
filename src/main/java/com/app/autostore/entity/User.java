@@ -2,6 +2,8 @@ package com.app.autostore.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name="usr")
 public class User {
@@ -11,8 +13,10 @@ public class User {
     private Long id;
 
     private String username;
-
     private String password;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
+    private Set<Car> cars;
 
     public Long getId() {
         return id;
