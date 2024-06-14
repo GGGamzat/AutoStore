@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:each="el : ${car}">
+        <h1 th:text="${el.name}"></h1>
+        <h1 th:text="${el.model}"></h1>
+        <h1 th:text="${el.year}"></h1>
+        <h1 th:text="${el.carcass}"></h1>
+        <h1 th:text="${el.engine}"></h1>
+    </div>
+</body>
+</html>
